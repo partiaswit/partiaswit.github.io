@@ -1,0 +1,123 @@
+/* Program page specific styles */
+
+:root {
+    --primary-red: #e63946;
+    --primary-orange: #f77f00;
+    --primary-yellow: #fcbf49;
+    --dark-bg: #121212;
+    --light-text: #ffffff;
+    --hero-overlay: rgba(0, 0, 0, 0.7);
+    --card-bg: linear-gradient(145deg, #1a1a1a, #242424);
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    --text-secondary: #cccccc;
+    --footer-bg: #0a0a0a;
+    --text-color: white;
+    --header-bg: rgba(18, 18, 18, 0.9);
+    --social-icon-bg: #333;
+}
+
+.program-hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('https://source.unsplash.com/random/1920x1080/?future,dawn') no-repeat center center;
+    background-size: cover;
+    animation: gentleZoom 20s infinite alternate;
+}
+
+@keyframes gentleZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.program-points {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.program-point {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.program-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-red), var(--primary-orange));
+    z-index: 0;
+}
+
+.program-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.program-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary-yellow);
+}
+
+.program-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--light-text);
+}
+
+.program-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-yellow);
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.intro-highlight {
+    color: var(--primary-yellow);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .program-point {
+        padding: 1.5rem;
+    }
+
+    .program-title {
+        font-size: 1.5rem;
+    }
+
+    .program-description {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Nas - Partia Świt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="onas-styles.css">
+    <link rel="stylesheet" href="mobile-menu-styles.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="index.html"><img src="swit_logo.png" alt="Partia Świt Logo" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Strona Główna</a>
+                <a href="o-nas.html">O Nas</a>
+                <a href="program.html">Nasz Program</a>
+                <a href="aktualnosci.html">Aktualności</a>
+                <a href="dolacz.html">Dołącz do Nas</a>
+            </div>
+            <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu outside of header for better isolation -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Strona Główna</a>
+        <a href="o-nas.html">O Nas</a>
+        <a href="program.html">Nasz Program</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="dolacz.html">Dołącz do Nas</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div>
+            <h1 class="page-title">O Nas</h1>
+            <p class="page-subtitle">Poznaj ludzi, którzy wyrywają Polskę z ciemności</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2 class="section-title">Nasza Historia</h2>
+        <div class="about-content">
+            <p class="placeholder-text">Tutaj znajdzie się tekst o historii partii, jej początkach i najważniejszych
+                wydarzeniach z jej historii.</p>
+        </div>
+
+        <h2 class="section-title">Nasze Wartości</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🔥</div>
+                <h3 class="value-title">Odwaga</h3>
+                <p>Mamy odwagę stawiać trudne pytania i podejmować trudne decyzje dla dobra Polski.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">⚖️</div>
+                <h3 class="value-title">Uczciwość</h3>
+                <p>Działamy uczciwie i transparentnie, stawiając dobro wspólne ponad interesami partykularnymi.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3 class="value-title">Współpraca</h3>
+                <p>Wierzymy w siłę współpracy i dialogu jako narzędzi do budowania lepszej Polski.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <h3 class="value-title">Innowacyjność</h3>
+                <p>Stawiamy na nowoczesne rozwiązania i świeże spojrzenie na wyzwania stojące przed Polską.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section leadership-section">
+        <h2 class="section-title">Nasi Liderzy</h2>
+        <div class="leadership-grid">
+            <!-- Placeholder for Prezes -->
+            <div class="leader-card">
+                <div class="leader-img-container">
+                    <img src="https://via.placeholder.com/600x800" alt="Prezes" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Imię i Nazwisko</h3>
+                    <p class="leader-title">Prezes</p>
+                    <p class="leader-bio">Tutaj znajdzie się krótka biografia prezesa partii, jego doświadczenie i wizja
+                        dla Polski.</p>
+                </div>
+            </div>
+
+            <!-- Placeholder for Wiceprezes -->
+            <div class="leader-card">
+                <div class="leader-img-container">
+                    <img src="https://via.placeholder.com/600x800" alt="Wiceprezes" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Imię i Nazwisko</h3>
+                    <p class="leader-title">Wiceprezes</p>
+                    <p class="leader-bio">Tutaj znajdzie się krótka biografia wiceprezesa partii, jego doświadczenie i
+                        obszar odpowiedzialności.</p>
+                </div>
+            </div>
+
+            <!-- Placeholder for Marszałek Sejmu -->
+            <div class="leader-card">
+                <div class="leader-img-container">
+                    <img src="https://via.placeholder.com/600x800" alt="Marszałek Sejmu" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Imię i Nazwisko</h3>
+                    <p class="leader-title">Marszałek Sejmu</p>
+                    <p class="leader-bio">Tutaj znajdzie się krótka biografia marszałka, jego doświadczenie i
+                        osiągnięcia w polskiej polityce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">tw</a>
+            <a href="#" class="social-icon">ig</a>
+            <a href="#" class="social-icon">yt</a>
+        </div>
+        <p>&copy; 2025 Partia Świt. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

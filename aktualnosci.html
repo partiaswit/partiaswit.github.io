@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktualności - Partia Świt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aktualnosci-styles.css">
+    <link rel="stylesheet" href="mobile-menu-styles.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="index.html"><img src="swit_logo.png" alt="Partia Świt Logo" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Strona Główna</a>
+                <a href="o-nas.html">O Nas</a>
+                <a href="program.html">Nasz Program</a>
+                <a href="aktualnosci.html">Aktualności</a>
+                <a href="dolacz.html">Dołącz do Nas</a>
+            </div>
+            <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu outside of header for better isolation -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Strona Główna</a>
+        <a href="o-nas.html">O Nas</a>
+        <a href="program.html">Nasz Program</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="dolacz.html">Dołącz do Nas</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div>
+            <h1 class="page-title">Aktualności</h1>
+            <p class="page-subtitle">Bądź na bieżąco z działaniami Partii Świt</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-img-container">
+                    <img src="https://source.unsplash.com/random/600x400/?youth,meeting" alt="Młodzież na spotkaniu"
+                        class="news-img">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">25 marca 2025</span>
+                    <h3 class="news-title">Nowy Program Młodzieżowy "Świt Młodych"</h3>
+                    <p class="news-excerpt">Przedstawiamy inicjatywę wspierającą młodych liderów w lokalnych
+                        społecznościach. Program "Świt Młodych" to kompleksowe wsparcie dla osób w wieku 16-25 lat,
+                        które chcą aktywnie działać na rzecz wyrwania Polski z ciemności.</p>
+                    <a href="#" class="news-link">Czytaj więcej</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-img-container">
+                    <img src="https://source.unsplash.com/random/600x400/?conference,ecology"
+                        alt="Konferencja o ekologii" class="news-img">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">10 marca 2025</span>
+                    <h3 class="news-title">Konferencja "Zielona Przyszłość Polski"</h3>
+                    <p class="news-excerpt">Z sukcesem zakończyliśmy ogólnopolską konferencję poświęconą wyzwaniom
+                        ekologicznym stojącym przed Polską. W wydarzeniu wzięło udział ponad 200 ekspertów, aktywistów i
+                        polityków z całego kraju.</p>
+                    <a href="#" class="news-link">Czytaj więcej</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-img-container">
+                    <img src="https://source.unsplash.com/random/600x400/?office,krakow" alt="Otwarcie biura w Krakowie"
+                        class="news-img">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">28 lutego 2025</span>
+                    <h3 class="news-title">Otwarcie Biura Regionalnego w Krakowie</h3>
+                    <p class="news-excerpt">Z radością informujemy o otwarciu naszego kolejnego biura regionalnego, tym
+                        razem w sercu Małopolski - Krakowie. To już siódme biuro regionalne Partii Świt w Polsce.</p>
+                    <a href="#" class="news-link">Czytaj więcej</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">tw</a>
+            <a href="#" class="social-icon">ig</a>
+            <a href="#" class="social-icon">yt</a>
+        </div>
+        <p>&copy; 2025 Partia Świt. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

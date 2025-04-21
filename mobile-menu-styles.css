@@ -1,0 +1,123 @@
+/* Mobile Menu Specific Styles */
+
+/* Base Mobile Menu - Always Hidden by Default */
+.mobile-menu {
+    display: none !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--header-bg);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 120;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: right 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, background-color 0.3s ease;
+}
+
+/* Hamburger Button - Hidden by Default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile-Only Behavior */
+@media (max-width: 768px) {
+
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: flex !important;
+    }
+
+    /* Configure mobile menu for mobile view */
+    .mobile-menu {
+        display: flex !important;
+        background-color: var(--header-bg);
+        border-left: 3px solid var(--primary-yellow);
+    }
+
+    /* Active state for hamburger button */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--primary-yellow);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--primary-yellow);
+    }
+
+    /* Active state for mobile menu */
+    .mobile-menu.active {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Mobile menu links */
+    .mobile-menu a {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+        padding: 0.75rem 0;
+        transition: all 0.3s ease;
+        color: var(--text-color);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:active {
+        background-color: rgba(252, 191, 73, 0.15);
+        color: var(--primary-yellow);
+        transform: translateY(-2px);
+    }
+
+    /* Make current page more distinct in mobile menu */
+    .mobile-menu a.active {
+        color: var(--primary-yellow);
+        background-color: rgba(252, 191, 73, 0.2);
+        position: relative;
+    }
+
+    .mobile-menu a.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background: var(--primary-yellow);
+    }
+
+    /* Hide desktop menu on mobile */
+    .nav-links {
+        display: none !important;
+    }
+}

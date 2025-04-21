@@ -1,0 +1,411 @@
+/* Common styles for Partia Świt website */
+:root {
+    /* Dark Theme (Default) Colors */
+    --primary-red: #e63946;
+    --primary-orange: #f77f00;
+    --primary-yellow: #fcbf49;
+    --dark-bg: #121212;
+    --secondary-bg: #1a1a1a;
+    --card-bg: linear-gradient(145deg, #1a1a1a, #242424);
+    --light-text: #ffffff;
+    --text-secondary: #cccccc;
+    --body-bg: var(--dark-bg);
+    --text-color: var(--light-text);
+    --header-bg: rgba(18, 18, 18, 0.9);
+    --card-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    --border-color: #333;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --footer-bg: #0a0a0a;
+    --social-icon-bg: #333;
+    --overlay-dark: rgba(0, 0, 0, 0.7);
+    --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    --nav-text-color: var(--light-text);
+    --nav-text-hover: var(--primary-yellow);
+}
+
+/* Light Theme Colors */
+[data-theme="light"] {
+    --dark-bg: #f8f9fa;
+    --secondary-bg: #e9ecef;
+    --card-bg: linear-gradient(145deg, #ffffff, #f0f0f0);
+    --light-text: #222222;
+    --text-secondary: #444444;
+    --body-bg: var(--dark-bg);
+    --text-color: var(--light-text);
+    --header-bg: rgba(248, 249, 250, 0.95);
+    --card-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    --border-color: #dee2e6;
+    --input-bg: rgba(0, 0, 0, 0.02);
+    --footer-bg: #e9ecef;
+    --social-icon-bg: #d1d1d1;
+    --overlay-dark: rgba(230, 230, 230, 0.7);
+    --hero-overlay: linear-gradient(rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0.7));
+    --nav-text-color: #222222;
+    --nav-text-hover: var(--primary-red);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    background-color: var(--header-bg);
+    box-sizing: border-box;
+}
+
+header.scrolled {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+/* Desktop Navigation */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-red), var(--primary-orange));
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--nav-text-hover);
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Active/current page indicator */
+nav a.active {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+nav a.active::after {
+    width: 100%;
+    height: 3px;
+    /* Make it a bit thicker for active links */
+}
+
+/* Hamburger Menu and Mobile Navigation */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--nav-text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--header-bg);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 120;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: right 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, background-color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    /* Hide desktop menu on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Configure mobile menu for mobile view */
+    .mobile-menu {
+        display: flex;
+    }
+
+    /* Active state for hamburger button */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--primary-yellow);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--primary-yellow);
+    }
+
+    /* Active state for mobile menu */
+    .mobile-menu.active {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Mobile menu links */
+    .mobile-menu a {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+        padding: 0.75rem 0;
+        transition: all 0.3s ease;
+        color: var(--nav-text-color);
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--primary-yellow);
+    }
+
+    /* Add overlay when mobile menu is active */
+    body.no-scroll::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 110;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .hamburger,
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Hero Sections */
+.page-hero {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.page-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-yellow);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Content Sections */
+.content-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    color: var(--primary-yellow);
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-red), var(--primary-orange));
+}
+
+/* Common Button Styles */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin: 1rem;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    color: white !important;
+    /* Force white text on buttons regardless of theme */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(230, 57, 70, 0.7);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--social-icon-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,348 @@
+/* Dolacz (Join) Page Specific Styles */
+
+/* Hero Section Specific Styles */
+.page-hero {
+    background-position: center 25%;
+}
+
+.page-hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('https://source.unsplash.com/random/1920x1080/?sunrise,dawn') no-repeat center center;
+    background-size: cover;
+    animation: slowZoom 20s infinite alternate;
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Join Form and Info Section Styles */
+.join-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.info-box {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-yellow, #fcbf49);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.info-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-red, #e63946), var(--primary-orange, #f77f00));
+    transition: width 0.3s ease;
+}
+
+.info-box:hover h3::after {
+    width: 100px;
+}
+
+.info-box ul {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-box li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+.info-box li::before {
+    content: "•";
+    color: var(--primary-orange, #f77f00);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Form Styles */
+.contact-form {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-yellow, #fcbf49);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.contact-form h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-red, #e63946), var(--primary-orange, #f77f00));
+    transition: width 0.3s ease;
+}
+
+.contact-form:hover h3::after {
+    width: 100px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #333;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light-text, white);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Specific styling for select dropdown */
+.contact-form select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #333;
+    background-color: rgba(40, 40, 40, 0.95);
+    color: var(--light-text, white);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23fcbf49" d="M0 0l6 6 6-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+}
+
+/* Fix for select option color */
+.contact-form select option {
+    background-color: #242424;
+    color: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange, #f77f00);
+    box-shadow: 0 0 8px rgba(247, 127, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--primary-red, #e63946), var(--primary-orange, #f77f00));
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(230, 57, 70, 0.7);
+}
+
+/* Footer styles specific to this page */
+footer {
+    background-color: var(--footer-bg, #0a0a0a);
+    color: var(--text-color, white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon {
+    background-color: var(--social-icon-bg, #333);
+    color: var(--text-color, white);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    margin-top: 5rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.faq-item {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-yellow, #fcbf49);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-orange, #f77f00);
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.6;
+    transition: all 0.5s ease;
+    color: var(--light-text, white);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0.5rem 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+/* Steps section */
+.steps-container {
+    margin: 4rem 0;
+}
+
+.step-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 2rem;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.5);
+}
+
+.step-content {
+    padding-top: 0.5rem;
+}
+
+.step-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-yellow);
+}
+
+.step-description {
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .join-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .step-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        margin-bottom: 1rem;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .info-box,
+    .contact-form {
+        padding: 1.5rem;
+    }
+}

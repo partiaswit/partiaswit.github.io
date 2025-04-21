@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz Program - Partia Świt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="program-styles.css">
+    <link rel="stylesheet" href="mobile-menu-styles.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="index.html"><img src="swit_logo.png" alt="Partia Świt Logo" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Strona Główna</a>
+                <a href="o-nas.html">O Nas</a>
+                <a href="program.html">Nasz Program</a>
+                <a href="aktualnosci.html">Aktualności</a>
+                <a href="dolacz.html">Dołącz do Nas</a>
+            </div>
+            <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu outside of header for better isolation -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Strona Główna</a>
+        <a href="o-nas.html">O Nas</a>
+        <a href="program.html">Nasz Program</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="dolacz.html">Dołącz do Nas</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg program-hero-bg"></div>
+        <div>
+            <h1 class="page-title">Nasz Program</h1>
+            <p class="page-subtitle">12 punktów, które wyrwą Polskę z ciemności</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="intro-text">
+            <p>Program Partii Świt to zestaw <span class="intro-highlight">konkretnych rozwiązań</span>, które wprowadzą
+                Polskę na drogę rozwoju i dobrobytu. Każdy punkt programu jest odpowiedzią na realne problemy społeczne
+                i gospodarczej, z którymi borykają się Polacy. Nasze propozycje są <span
+                    class="intro-highlight">odważne, ale realistyczne</span>.</p>
+        </div>
+
+        <div class="program-points">
+            <div class="program-point">
+                <span class="program-number">1</span>
+                <h3 class="program-title">Prawo do aborcji</h3>
+                <p class="program-description">Wprowadzimy prawo do przerwania ciąży do 18. tygodnia, decyzją wyłącznie
+                    kobiety.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">2</span>
+                <h3 class="program-title">Podatek zdrowotny</h3>
+                <p class="program-description">Wprowadzimy dodatkowy podatek: +2 zł od każdej paczki papierosów. Całość
+                    wpływów przeznaczymy na profilaktykę zdrowotną, leczenie nowotworów i walkę ze smogiem.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">3</span>
+                <h3 class="program-title">Podwyżki dla nauczycieli</h3>
+                <p class="program-description">Zwiększymy wynagrodzenia nauczycieli o 1000 zł brutto miesięcznie. Koszt
+                    pokryjemy z uszczelnienia systemu podatkowego.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">4</span>
+                <h3 class="program-title">Reforma Ministerstwa Edukacji</h3>
+                <p class="program-description">Ministrem edukacji będzie mogła zostać wyłącznie osoba z doświadczeniem
+                    pracy w szkole.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">5</span>
+                <h3 class="program-title">Bezpieczna praca – koniec z opóźnionymi wypłatami</h3>
+                <p class="program-description">Wprowadzimy automatyczne odsetki za spóźnione wypłaty – 0,5% dziennie.
+                    Pracownik nie będzie musiał pozywać pracodawcy.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">6</span>
+                <h3 class="program-title">Świeckie państwo</h3>
+                <p class="program-description">Zlikwidujemy Fundusz Kościelny, zakończymy przekazywanie nieruchomości
+                    Kościołom za bezcen, zlikwidujemy wyjątki dla Kościołów przy zakupie ziemi i wprowadzimy obowiązek
+                    ewidencjonowania ich przychodów.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">7</span>
+                <h3 class="program-title">Sprawiedliwość podatkowa</h3>
+                <p class="program-description">Wprowadzimy minimalny CIT dla dużych firm, zakaz rozliczania kosztów z
+                    rajów podatkowych, obowiązkowe raportowanie przychodów i właścicieli. Wykorzystamy AI do wykrywania
+                    nadużyć.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">8</span>
+                <h3 class="program-title">Tania żywność</h3>
+                <p class="program-description">Obniżymy VAT z 5% do 3% na podstawowe produkty spożywcze: chleb, mleko,
+                    masło, warzywa, owoce. Koszt pokryjemy z uszczelnienia VAT i CIT.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">9</span>
+                <h3 class="program-title">Cyfrowe państwo</h3>
+                <p class="program-description">Rozbudujemy aplikację mojeIKP – umożliwimy zapisy do lekarzy i dostęp do
+                    terminów we wszystkich przychodniach w okolicy.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">10</span>
+                <h3 class="program-title">Prawa dziecka</h3>
+                <p class="program-description">Zapewnimy dostęp do psychologa w każdej szkole, ochronę przed przemocą i
+                    edukację prawną dla młodzieży.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">11</span>
+                <h3 class="program-title">Prawa zwierząt</h3>
+                <p class="program-description">Wprowadzimy zakaz hodowli klatkowej, obowiązkową rejestrację i nadzór nad
+                    schroniskami oraz surowe kary dla sprawców przemocy wobec zwierząt.</p>
+            </div>
+
+            <div class="program-point">
+                <span class="program-number">12</span>
+                <h3 class="program-title">Ekologia i czyste środowisko</h3>
+                <p class="program-description">Zainwestujemy 4 mld zł rocznie w odnawialne źródła energii w szkołach i
+                    szpitalach, dopłaty do czystego ogrzewania, oczyszczalnie ścieków i drzewa w miastach. Wprowadzimy
+                    zakaz betonowania rzek i zabudowy parków narodowych.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">tw</a>
+            <a href="#" class="social-icon">ig</a>
+            <a href="#" class="social-icon">yt</a>
+        </div>
+        <p>&copy; 2025 Partia Świt. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

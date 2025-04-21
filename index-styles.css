@@ -1,0 +1,344 @@
+/* Homepage specific styles */
+
+:root {
+    --primary-red: #e63946;
+    --primary-orange: #f77f00;
+    --primary-yellow: #fcbf49;
+    --dark-bg: #121212;
+    --light-text: #ffffff;
+    --hero-overlay: rgba(0, 0, 0, 0.7);
+    --card-bg: linear-gradient(145deg, #1a1a1a, #242424);
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    --text-secondary: #cccccc;
+    --footer-bg: #0a0a0a;
+    --text-color: white;
+    --header-bg: transparent;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hero-overlay),
+        url('https://source.unsplash.com/random/1920x1080/?poland,dawn') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+.logo-container {
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+    max-width: 250px;
+    filter: drop-shadow(0 0 10px rgba(252, 191, 73, 0.5));
+}
+
+.slogan-container {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.slogan {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+    animation: slideUp 1s ease-out;
+}
+
+.sub-slogan {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--primary-yellow);
+    animation: slideUp 1.2s ease-out;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+header.scrolled {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-red), var(--primary-orange));
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-yellow);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--primary-yellow);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-red), var(--primary-orange));
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.mission-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-red), var(--primary-orange));
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.mission-card:hover::before {
+    width: 100%;
+    opacity: 0.1;
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-yellow);
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.mission-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.join-section {
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.9), rgba(247, 127, 0, 0.9)),
+        url('https://source.unsplash.com/random/1920x1080/?polska,flag') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.join-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.join-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin: 1rem;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(230, 57, 70, 0.7);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--social-icon-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 2.5rem;
+    }
+
+    .sub-slogan {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

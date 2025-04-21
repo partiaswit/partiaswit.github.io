@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dołącz do Nas - Partia Świt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dolacz-styles.css">
+    <link rel="stylesheet" href="mobile-menu-styles.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <a href="index.html"><img src="swit_logo.png" alt="Partia Świt Logo" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Strona Główna</a>
+                <a href="o-nas.html">O Nas</a>
+                <a href="program.html">Nasz Program</a>
+                <a href="aktualnosci.html">Aktualności</a>
+                <a href="dolacz.html">Dołącz do Nas</a>
+            </div>
+            <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu outside of header for better isolation -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Strona Główna</a>
+        <a href="o-nas.html">O Nas</a>
+        <a href="program.html">Nasz Program</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="dolacz.html">Dołącz do Nas</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div>
+            <h1 class="page-title">Dołącz do Nas</h1>
+            <p class="page-subtitle">Razem wyrwiemy Polskę z ciemności</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <p class="content-subtitle">Partia Świt to ruch społeczny dla wszystkich, którzy chcą działać na rzecz lepszej
+            Polski. Koniec nocy. Nadchodzi Świt.</p>
+
+        <div class="join-section">
+            <div class="info-box">
+                <h3>Dlaczego warto dołączyć?</h3>
+                <ul>
+                    <li>Będziesz częścią ruchu, który zmienia Polskę</li>
+                    <li>Zyskasz realny wpływ na kształtowanie przyszłości kraju</li>
+                    <li>Poznasz ludzi o podobnych wartościach i wizji</li>
+                    <li>Rozwiniesz swoje umiejętności i zdobędziesz cenne doświadczenie</li>
+                    <li>Staniesz się częścią historycznej zmiany</li>
+                </ul>
+
+                <h3>Jak możesz się zaangażować?</h3>
+                <ul>
+                    <li>Dołącz do struktur partii</li>
+                    <li>Zostań wolontariuszem przy naszych kampaniach</li>
+                    <li>Wspieraj finansowo nasze działania</li>
+                    <li>Promuj nasze idee w swoim środowisku</li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Formularz kontaktowy</h3>
+                <form id="joinForm">
+                    <input type="text" id="name" placeholder="Imię i Nazwisko" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="tel" id="phone" placeholder="Telefon">
+                    <select id="involvement" required>
+                        <option value="" disabled selected>Wybierz formę zaangażowania</option>
+                        <option value="member">Chcę zostać członkiem</option>
+                        <option value="volunteer">Chcę zostać wolontariuszem</option>
+                        <option value="support">Chcę wesprzeć finansowo</option>
+                        <option value="info">Chcę otrzymywać informacje</option>
+                    </select>
+                    <textarea id="message" placeholder="Twoja wiadomość (opcjonalnie)" rows="4"></textarea>
+                    <button type="submit">Dołącz do ruchu</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="page-subtitle">Najczęściej zadawane pytania</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">Jak zostać członkiem Partii Świt?</div>
+                    <div class="faq-answer">Aby zostać członkiem, wypełnij powyższy formularz wybierając opcję "Chcę
+                        zostać członkiem". Skontaktujemy się z Tobą w ciągu 48 godzin, aby przekazać deklarację
+                        członkowską i szczegółowe informacje o dalszych krokach.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Czy członkostwo wiąże się z opłatami?</div>
+                    <div class="faq-answer">Tak, członkowie partii opłacają składki członkowskie w wysokości 20 zł
+                        miesięcznie. Studenci, emeryci i renciści mogą skorzystać z obniżonej składki w wysokości 10 zł
+                        miesięcznie. Składki umożliwiają nam prowadzenie działalności niezależnie od zewnętrznych
+                        wpływów.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Jak mogę pomóc jako wolontariusz?</div>
+                    <div class="faq-answer">Jako wolontariusz możesz angażować się w różnorodne działania: organizację
+                        wydarzeń, prowadzenie mediów społecznościowych, projekty lokalne, kampanie informacyjne i wiele
+                        innych. Po wypełnieniu formularza skontaktujemy się, aby dopasować formę współpracy do Twoich
+                        umiejętności i możliwości.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Jak mogę finansowo wesprzeć partię?</div>
+                    <div class="faq-answer">Wsparcie finansowe można przekazać na konto partii: 12 3456 7890 1234 5678
+                        9012 3456 z dopiskiem "Darowizna na cele statutowe". Zgodnie z polskim prawem, darowizny mogą
+                        być wpłacane wyłącznie przez obywateli polskich. Każde wsparcie, nawet niewielkie, ma dla nas
+                        ogromne znaczenie.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">tw</a>
+            <a href="#" class="social-icon">ig</a>
+            <a href="#" class="social-icon">yt</a>
+        </div>
+        <p>&copy; 2025 Partia Świt. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dolacz.js"></script>
+</body>
+
+</html>
