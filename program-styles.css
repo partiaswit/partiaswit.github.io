@@ -121,3 +121,128 @@
         font-size: 1rem;
     }
 }
+
+/* Removed Funding Section Styles */
+
+/* Funding Section Styles */
+.funding-section {
+    margin-top: 5rem;
+    /* Add space above the funding section */
+}
+
+.funding-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    /* Consistent with program intro */
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.funding-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.funding-point {
+    background: var(--card-bg);
+    /* Use consistent card background */
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.funding-point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.funding-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow));
+    /* Slightly different gradient */
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    /* Position number at the top-left */
+}
+
+.funding-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--primary-yellow);
+}
+
+.funding-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--light-text);
+    flex-grow: 1;
+    /* Ensure description takes available space */
+    margin-bottom: 1rem;
+}
+
+.funding-income {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-orange);
+    /* Highlight the income */
+    margin-top: auto;
+    /* Push income to the bottom */
+    text-align: right;
+}
+
+.funding-summary {
+    background: linear-gradient(145deg, #2a2a2a, #333333);
+    /* Darker, distinct background */
+    padding: 2.5rem;
+    margin: 3rem auto 0;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.funding-summary p {
+    font-size: 1.4rem;
+    /* Increased font size */
+    line-height: 1.8;
+    color: var(--light-text);
+    margin: 0;
+}
+
+.funding-summary strong {
+    color: var(--primary-yellow);
+    /* Highlight the numbers */
+    font-weight: 800;
+    font-size: 1.5rem;
+    /* Slightly larger for emphasis */
+}
+
+/* Responsive adjustments for funding points */
+@media (max-width: 768px) {
+    .funding-points {
+        grid-template-columns: 1fr;
+        /* Stack cards on smaller screens */
+    }
+
+    .funding-summary p {
+        font-size: 1.2rem;
+    }
+
+    .funding-summary strong {
+        font-size: 1.3rem;
+    }
+}

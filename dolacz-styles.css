@@ -236,38 +236,20 @@ footer {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary-yellow, #fcbf49);
-    cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: var(--primary-orange, #f77f00);
-    transition: all 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
-    transform: translateY(-50%) rotate(45deg);
+    display: none;
 }
 
 .faq-answer {
-    padding: 0 1.5rem;
-    max-height: 0;
-    overflow: hidden;
+    display: block;
+    padding: 1.5rem;
+    color: var(--text-secondary, #cccccc);
     line-height: 1.6;
-    transition: all 0.5s ease;
-    color: var(--light-text, white);
-}
-
-.faq-item.active .faq-answer {
-    padding: 0.5rem 1.5rem 1.5rem;
-    max-height: 500px;
 }
 
 /* Steps section */
@@ -346,3 +328,5 @@ footer {
         padding: 1.5rem;
     }
 }
+
+/* Removed styles for FAQ intro and summary */

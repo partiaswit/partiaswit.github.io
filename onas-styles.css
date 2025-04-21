@@ -149,7 +149,7 @@ nav a:hover::after {
 
 .about-content {
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 4rem;
 }
 
@@ -187,6 +187,8 @@ nav a:hover::after {
 
 .leadership-section {
     margin: 5rem 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .leadership-grid {
