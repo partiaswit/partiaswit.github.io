@@ -12,7 +12,7 @@
     --text-secondary: #cccccc;
     --footer-bg: #0a0a0a;
     --text-color: white;
-    --header-bg: transparent;
+    --header-bg: rgba(18, 18, 18, 0.9);
 }
 
 body {
@@ -94,7 +94,7 @@ header {
     padding: 1rem 2rem;
     z-index: 100;
     transition: background-color 0.3s ease;
-    background-color: transparent;
+    background-color: var(--header-bg);
 }
 
 header.scrolled {
